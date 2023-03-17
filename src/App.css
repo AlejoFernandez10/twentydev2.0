@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'DM sans', sans-serif;
+  scroll-behavior: smooth;
+
+}
+
+
+/* INICIO ANIMACION */
+
+.inicio-main-container .inicio-center-container .inicio-texts-container .main-title span{
+  position: relative;
+}
+
+.inicio-main-container .inicio-center-container .inicio-texts-container .main-title span:after{
+  content: " ";
+  border-left: 1px solid rgb(15 23 42) ;
+  background: rgb(15 23 42);
+  width: 100%;
+  right: 0;
+  height: 100%;
+  position: absolute;
+
+  animation:  typing 1.5s infinite alternate;
+
+  
+}
+@keyframes typing {
+  from{
+      width: 100%;
+  }
+  to{
+      width: 0;
+  }
+}
+
+
+
+/* TEMPLATE BUTTON */
+
+
+.template-main-container .templates-container .template{
+  position: relative;
+  
+}
+
+
+.template-main-container .templates-container .template .detailsContainer .template-link .template-img{
+  border-radius: 8px;
+}
+
+.template-main-container .templates-container .template .detailsContainer .template-link  .img-gradient{
+  cursor: pointer;
+  position: absolute;
+  height: 100%; 
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 10px;
+  background: linear-gradient( rgba(0, 0, 0, .8), rgba(0, 0, 0, .8) );
+  opacity: 0;
+  transition: all .3s ease;
+  
+}
+
+.template-main-container .templates-container .template .detailsContainer .template-link  .img-gradient:hover{
+  opacity:0.6;
+}
+
+.template-main-container .templates-container .template .detailsContainer .template-link .template-Detail-btn{
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+}
+
+.template-main-container .templates-container .template .detailsContainer .template-link:hover .template-Detail-btn {
+  opacity: 1;
+  animation: appear .5s 1;
+}
+
+@keyframes appear {
+  from{
+    bottom: -70px;
+  }
+  to{
+    bottom: 50%;
+  }
+}
+
+
