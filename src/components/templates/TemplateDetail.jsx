@@ -55,34 +55,34 @@ const TemplateDetail = ({props}) => {
                              >
                           <SwiperSlide> <img
                                    alt={template.title}
-                                   srcSet={`${template.image}`}  
+                                   srcSet={template.image}  
                                    className=' w-full object-contain'             
                                  />
                          </SwiperSlide>
 
                           <SwiperSlide> <img
                                    alt={template.title}
-                                   srcSet={`${template.image1}`}
+                                   srcSet={template.image1}
                                    className="w-full object-contain "
                                  />
                          </SwiperSlide>
 
                           <SwiperSlide> <img
                                    alt={template.title}
-                                   srcSet={`${template.image2}`}
+                                   srcSet={template.image2}
                                    className="w-full object-contain  "
                                  />
                          </SwiperSlide>
 
                           <SwiperSlide> <img
                                    alt={template.title}
-                                   srcSet={`${template.image3}`}
+                                   srcSet={template.image3}
                                    className="w-full object-contain "
                                  />
                          </SwiperSlide>
                          <SwiperSlide> <img
                                    alt={template.title}
-                                   srcSet={`${template.image4}`}
+                                   srcSet={template.image}
                                    className="w-full object-contain "
                                  />
                          </SwiperSlide>
