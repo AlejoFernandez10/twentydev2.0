@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-
+import { useState } from 'react'
 
 
 import '../../App.css'
@@ -50,10 +50,22 @@ const TemplateContainer = () => {
     }
   ]  
 
+  const [loader, setLoader] = useState(true)
 
-  if(data){
 
-    return (
+  setTimeout(() => {
+    setLoader(false)
+  }, 2000);
+
+
+  if(loader){
+    return(
+      <div className='h-[100vh] w-full flex justify-center items-center'>
+        <span class="loader "></span>
+      </div>
+    )
+  }else{
+      return (
       <>
       <div id="template" className=' h-[10px] w-full'></div>
   <div className="template-main-container   min-h-[100vh] flex flex-col items-center justify-center" >

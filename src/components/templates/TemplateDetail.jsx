@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 
-
+import '../../App.css'
 
 
 const TemplateDetail = ({props}) => {
@@ -21,8 +21,21 @@ const TemplateDetail = ({props}) => {
     const {id} = useParams()
     const templateFilter = props.filter((template)=> template.id == id)
     
+    const [loader, setLoader] = useState(true)
+
+    setTimeout(() => {
+      setLoader(false)
+    }, 1000);
 
 
+    if(loader){
+      return(
+        <div className='h-[100vh] w-full flex justify-center items-center'>
+        <span class="loader"></span>
+      </div>
+      )
+      
+    }else{
 
   return (
     <>
@@ -234,6 +247,7 @@ const TemplateDetail = ({props}) => {
 
     </>  
   )
+        } 
 }
 
 export default TemplateDetail

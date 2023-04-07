@@ -13,11 +13,13 @@ import Gymimage2   from "../../assets/templates/gymSiteT/imagen-2.webp"
 import Gymimage3   from "../../assets/templates/gymSiteT/imagen-3.webp"
 import Gymimage4   from "../../assets/templates/gymSiteT/imagen-4.webp"
 import ecommerceImage   from "../..//assets/templates/E-commerce.jpeg"
-  import ecommerceImage1   from "../../assets/templates/e-commerceT/imagen-1.webp"
-  import ecommerceImage2   from "../../assets/templates/e-commerceT/imagen-2.webp"
-  import ecommerceImage3   from "../../assets/templates/e-commerceT/imagen-3.webp"
-  import ecommerceImage4   from "../../assets/templates/e-commerceT/imagen-4.webp"
-  import verIcon from '../../assets/ver.png'
+import ecommerceImage1   from "../../assets/templates/e-commerceT/imagen-1.webp"
+import ecommerceImage2   from "../../assets/templates/e-commerceT/imagen-2.webp"
+import ecommerceImage3   from "../../assets/templates/e-commerceT/imagen-3.webp"
+import ecommerceImage4   from "../../assets/templates/e-commerceT/imagen-4.webp"
+import verIcon from '../../assets/ver.png'
+
+
 
 const TemplateDetailContainer = () => {
   
@@ -64,12 +66,12 @@ const TemplateDetailContainer = () => {
     }
   ]  
 
-
+  
     
   
     if(data){
-
-        return (
+    
+          return (
           <>
           
       <div className="template-main-container   min-h-[100vh] flex flex-col " > 
@@ -86,7 +88,7 @@ const TemplateDetailContainer = () => {
               
       </div>
       
-      <div className="" style={{textAlign:"center",width:"100%"}}>
+      <div className="text-center w-full" >
         <p style={{color:"rgb(148 163 184)"}}>Si te interesa lo que ves, no dudes en contactarnos!</p>
         
        </div>
