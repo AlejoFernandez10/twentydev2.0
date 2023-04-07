@@ -24,7 +24,7 @@ const Contacto = () => {
     <input type="text" name='number' placeholder="Número telefónico" className="bg-[#0B1325] m-auto h-[60px] w-[95%] max-w-[400px] md:max-w-[550px]  rounded-[10px] p-3" required autocomplete="off" no-controls />
     <input type="email" name='mail' placeholder="Correo electrónico" className="bg-[#0B1325] m-auto h-[60px] w-[95%] max-w-[400px] md:max-w-[550px]  rounded-[10px] p-3" required autocomplete="off" />
     <textarea name='message' cols="30" rows="5" className="bg-[#0B1325] p-3 m-auto w-[95%] max-w-[400px] md:max-w-[550px] " placeholder="Deja tu consulta ..." required autocomplete="off"></textarea>
-    <button type='submit' className=' w-[120px] m-auto mt-10 mb-20 px-4 py-[0.8rem] rounded-[7px] text-[#5FB5DE] border border-[#5FB5DE] transition duration-200 hover:text-white hover:bg-[#5FB5DE] ' >Enviar!</button>
+    <button type='submit' className=' w-[120px] m-auto mt-10 mb-20 px-4 py-[0.8rem] rounded-[5px] text-[#5FB5DE] border border-[#5FB5DE] transition duration-200 hover:text-white hover:bg-[#5FB5DE] ' >Enviar!</button>
     
   </form>
   

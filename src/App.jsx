@@ -2,38 +2,42 @@ import { useState } from 'react'
 import Navbar from './components/Navbar'
 import design from './assets/design.png'
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import './App.css'
 import Inicio from './components/Inicio'
 import Nosotros from './components/Nosotros'
-import Templates from './components/Templates'
-import Planes from './components/Planes'
+import TemplateContainer from './components/templates/TemplateContainer'
+import PlanesContainer from './components/planes/PlanesContainer'
 import Contacto from './components/Contacto'
+import TemplateDetailContainer from './components/templates/TemplateDetailContainer'
 
 function App() {
   
 
   return (
-    <>
-    <div className="App min-h-[100vh] w-full bg-[#0F172A] relative ">
+    <BrowserRouter>
+    <div className="App  w-full bg-[#0F172A]  min-h-[100vh] ">
 
-      <img srcSet={design}  alt="" className='absolute h-[200px] right-6 top-[-50px] sm:h-[240px] sm:right-12 md:h-[250px] lg:h-[300px] lg:right-16'/>
-      <img srcSet={design}  alt="" className='absolute h-[130px] right-0 sm:h-[170px] md:h-[190px] lg:h-[230px]'/>
+     
 
-      <Navbar />
+      <Navbar />     
 
-      <Inicio />
+      <Routes>
 
-      <Nosotros />
+        <Route exact path='/' element={<Inicio /> }></Route>
 
-      <Templates />
+        <Route exact path={'/templates'} element={ <TemplateContainer />}></Route>
+        <Route exact path={'/planes'} element={ <PlanesContainer /> } ></Route>
+        <Route exact path={`/templates/:id`} element={<TemplateDetailContainer /> } />
 
-      <Planes />
+        
+      </Routes>
 
-      <Contacto />
+      
      
     </div>
-    </>
+    </BrowserRouter>
   )
 }
 

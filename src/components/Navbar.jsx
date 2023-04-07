@@ -1,15 +1,13 @@
-import { Fragment } from 'react'
+
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
-import logo from '../assets/logo.webp'
-
+import { Link } from 'react-router-dom'
 
 const navigation = [
-  { name: 'Inicio', href: '#', current: false },
-  { name: 'Nosotros', href: '#nosotros', current: false },
-  { name: 'Templates', href: '#template', current: false },
-  { name: 'Planes', href: '#', current: false },
+  { name: 'Inicio', href: '/', current: false },
+  { name: 'Templates', href: '/templates', current: false },
+  { name: 'Planes', href: '/planes', current: false },
+  { name: 'Proceso', href: '/proceso', current: false },
   { name: 'Contacto', href: '#', current: false },
 ]
 
@@ -17,17 +15,16 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
+export default function Example() {
   return (
-    <header className='w-full min-h-[30px]'>
-    <Disclosure as="nav" className="bg-[#0F172A] ">
+    <Disclosure as="nav" className="bg-[#12192D] w-full h-auto fixed z-[100]">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-14">
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 z-50">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center  sm:hidden ">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-50 hover:bg-[#0E273B]  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -36,60 +33,48 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                
-                <a >
+              <div className="flex flex-1 items-center justify-end sm:items-stretch sm:justify-between max-w-[1100px] m-auto">
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-8 w-auto lg:hidden"
-                    srcSet={logo}
-                    alt="Twenty Dev"
+                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    alt="Your Company"
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
-                    srcSet={logo}
-                    alt="Twenty Dev"
+                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    alt="Your Company"
                   />
                 </div>
-                </a>
-                
-                <div className="hidden sm:ml-6 sm:block w-full "> 
-                  <div className="flex justify-end space-x-4 gap-2">
+                <div className="hidden sm:ml-6 sm:block z-50  lg:mr-12">
+                  <div className="flex  space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-50 transition duration-200 scale-100  hover:scale-105 hover:text-blue-200 ',
-                          '  mt-2 text-md font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
+                        to={item.href}
+                        className="text-gray-200 rounded-md px-1 py-2 text-sm font-medium scale-100 transition duration-150 hover:text-white hover:scale-105"
+                        
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">              
-              
-              
-
+             
                 
-              </div>
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3">
+          <Disclosure.Panel className=" sm:hidden">
+            <div className="space-y-1 px-2 pt-2 pb-3 ">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-50 hover:bg-[#0E273B] hover:text-white',
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
@@ -102,6 +87,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-    </header>
   )
 }
