@@ -1,7 +1,6 @@
 import React from 'react'
 import TemplateDetail from './TemplateDetail' 
-import data from '../../data.json'
-
+import data from './data.json'
 
 
 const TemplateDetailContainer = () => {
