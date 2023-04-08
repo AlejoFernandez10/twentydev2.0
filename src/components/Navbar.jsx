@@ -1,14 +1,17 @@
 
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Link } from 'react-router-dom'
+import { Disclosure } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link, useNavigate } from 'react-router-dom'
+
+
+import logo from '../assets/logo.png'
 
 const navigation = [
   { name: 'Inicio', href: '/', current: false },
   { name: 'Templates', href: '/templates', current: false },
   { name: 'Planes', href: '/planes', current: false },
-  { name: 'Proceso', href: '/proceso', current: false },
-  { name: 'Contacto', href: '#', current: false },
+  { name: 'FAQs', href: '/faqs', current: false },
+  { name: 'Contacto', href: '/contacto', current: false },
 ]
 
 function classNames(...classes) {
@@ -16,6 +19,12 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+
+
+  
+  const navigate = useNavigate()
+
+
   return (
     <Disclosure as="nav" className="bg-[#12192D] w-full h-auto fixed z-[100]">
       {({ open }) => (
@@ -34,36 +43,40 @@ export default function Example() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-end sm:items-stretch sm:justify-between max-w-[1100px] m-auto">
-                <div className="flex flex-shrink-0 items-center">
+                <Link to={'/'} className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="block h-16  pb-0 m-1 w-auto lg:hidden"
+                    src={logo}
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="hidden h-16 mt-1 w-auto lg:block"
+                    src={logo}
                     alt="Your Company"
+
                   />
-                </div>
+                </Link>
                 <div className="hidden sm:ml-6 sm:block z-50  lg:mr-12">
-                  <div className="flex  space-x-4">
+                  <div className="flex   space-x-4">
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
                         to={item.href}
-                        className="text-gray-200 rounded-md px-1 py-2 text-sm font-medium scale-100 transition duration-150 hover:text-white hover:scale-105"
+                        
+                        className="text-gray-200 rounded-md px-1 py-2 mt-3 text-sm font-medium scale-100 transition duration-150 hover:text-white hover:scale-105"
                         
                       >
                         {item.name}
                       </Link>
                     ))}
+                   
                   </div>
                 </div>
               </div>
              
                 
             </div>
+            
           </div>
 
           <Disclosure.Panel className=" sm:hidden">
@@ -72,7 +85,8 @@ export default function Example() {
                 <Disclosure.Button
                   key={item.name}
                   as="a"
-                  href={item.href}
+                  onClick={()=> navigate(`${item.href}`)}
+
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
@@ -82,10 +96,12 @@ export default function Example() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+             
             </div>
           </Disclosure.Panel>
         </>
       )}
     </Disclosure>
+
   )
 }

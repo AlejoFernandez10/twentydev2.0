@@ -12,18 +12,21 @@ import Nosotros from './Nosotros'
 import { Link } from 'react-router-dom'
 
 
+
 const Inicio = () => {
+
+
 
   return (
     <>
-    <div className='inicio-main-container relative w-full flex justify-center items-center z-10 min-h-[100vh]'>
+    <div id='faqs' className='inicio-main-container relative w-full flex justify-center items-center z-10 min-h-[100vh]'>
        
       <div className="inicio-center-container m-auto h-[90vh] max-w-[1180px] flex flex-col items-center justify-center   md:flex-row " >
 
       
       <div className='inicio-texts-container  mr-0   w-[full] md:w-[50%] flex flex-col justify-start items-center   md:m-auto md:mt-[23vh] lg:mt-[25vh] '>
          
-          <h1 className= ' main-title  mt-[30px]  text-4xl leading-none w-[80%] text-center sm:text-[46px] sm:w-[60%] md:w-[100%] md:text-left lg:text-[56px] xl:text-7xl md:pl-5 bg-gradient-to-r from-[#DFFDFF] to-[#4EA4CD] bg-clip-text text-transparent'>Bienvenidos a  Twenty<span className='bg-gradient-to-r from-[#7FD7DF] to-[#4EA4CD] bg-clip-text text-transparent mt-[40px]  '>Dev! </span></h1>
+          <h1 className= ' main-title  mt-[30px]  text-4xl leading-none w-[80%] text-center sm:text-[46px] sm:w-[60%] md:w-[100%] md:text-left lg:text-[56px] xl:text-7xl md:pl-5 bg-gradient-to-r from-[#DFFDFF] to-[#4EA4CD] bg-clip-text text-transparent'>Bienvenidos a  Twenty<span className='bg-gradient-to-r from-[#8fdbe2] to-[#4EA4CD] bg-clip-text text-transparent mt-[40px]  '>Dev! </span></h1>
           
           
           <p className='text-[#94A3B8] text-[14px] sm:text-[15px] w-[80%] text-center mt-[20px] sm:mt-[35px] md:text-left md:w-[100%] md:text-[18px] md:pl-6 lg:text-[20px]'>Hacemos de tus sueños una página web.</p>
@@ -65,6 +68,9 @@ const Inicio = () => {
     </div>
     <div className='bg-[#5FB5DE] z-0  blur-[100px] h-[120px] bottom-0 right-0 w-[120px]   md:h-[150px]  md:w-[150px] md:blur-[120px] lg:h-[200px] lg:w-[200px] lg:blur-[140px] absolute xl:h-[250px] xl:w-[300px] xl:blur-[200px]'></div>
     </section>
+
+
+    
 
     </>
   )

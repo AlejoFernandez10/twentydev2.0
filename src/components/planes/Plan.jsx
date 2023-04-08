@@ -7,7 +7,7 @@ const Plan = ({title, color, tick, noTick, descrip, priceLineThrough, noLoginTic
   return (
     <div>
 
-<div className="h-[44rem] max-w-[400px] min-w-[300px] rounded-[10px] ml-2 flex flex-col flex-grow-0 flex-shrink-0 bg-[#12192D]" style={{flexBasis:"auto"}}>
+<div className="h-[44rem] max-w-[400px] min-w-[300px] rounded-[10px] ml-2 flex flex-col flex-grow-0 flex-shrink-0 bg-[#12192D] shadow-2xl" style={{flexBasis:"auto"}}>
 <h5 className=" text-center text-[27px] text-white mt-[20px] md:text-[32px] lg:text-[35px]">Plan <span style={{color:`${color}`}}> {title}</span></h5>
 <p className='text-[#94A3B8] text-[13px] w-[70%]   mt-[20px]  text-center self-center md:text-[16px] lg:w-[80%] xl:w-[80%]'>{descrip}</p>
 <p className='text-center text-white mb-[40px]  grid grid-rows-2  place-items-center h-[80px]   border-b-2  mr-[5%] ml-[5%]  relative ' ><div><span className='precioTachado text-[20px] line-through md:text-[22px]' >{priceLineThrough ? priceLineThrough : priceLineThrough}</span><span className='descuento text-[20px]  md:text-[22px] font-semibold'  style={{color:`${color}`}}>{discountText}</span></div><span className='text-[26px] md:text-[30px] lg:text-[35px] lg:mb-[10px]'>{discountPrice ? discountPrice : discountPrice}</span>  <span className='precioActual text-[27px] mb-[50%] mt-[45%] absolute md:text-[30px] lg:text-[35px]'>{actualPrice}</span></p>

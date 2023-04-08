@@ -84,14 +84,14 @@ const TemplateDetailContainer = () => {
                 
              </div>       
       
-          
+             <div className="text-center mt-14 w-full" >
+        <p style={{color:"rgb(148 163 184)"}}>Todas las imágenes, textos y colores son 100% modificables!</p>
+        
+       </div>
               
       </div>
       
-      <div className="text-center w-full" >
-        <p style={{color:"rgb(148 163 184)"}}>Si te interesa lo que ves, no dudes en contactarnos!</p>
-        
-       </div>
+      
       
       </>
         )

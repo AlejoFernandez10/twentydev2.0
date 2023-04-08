@@ -11,6 +11,9 @@ import TemplateContainer from './components/templates/TemplateContainer'
 import PlanesContainer from './components/planes/PlanesContainer'
 import Contacto from './components/Contacto'
 import TemplateDetailContainer from './components/templates/TemplateDetailContainer'
+import Footer from './components/Footer'
+import Faqs from './components/Faqs'
+
 
 function App() {
   
@@ -30,6 +33,8 @@ function App() {
         <Route exact path={'/templates'} element={ <TemplateContainer />}></Route>
         <Route exact path={'/planes'} element={ <PlanesContainer /> } ></Route>
         <Route exact path={`/templates/:id`} element={<TemplateDetailContainer /> } />
+        <Route exact path={'/contacto'} element={ <Contacto /> }  />
+        <Route exact path={'/faqs'} element={ <Faqs /> } />
 
         
       </Routes>
@@ -37,6 +42,8 @@ function App() {
       
      
     </div>
+
+    <Footer />
     </BrowserRouter>
   )
 }

@@ -42,12 +42,14 @@ const TemplateDetail = ({props}) => {
     {templateFilter?.map((template)=>(
 
        <div key={template.id}>
-       <div className=" mx-auto  max-w-screen-xl px-4 pt-[200px] ">
-         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
+       <div className=" mx-auto  max-w-screen-xl px-4 pt-20  md:pt-[200px] ">
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
 
 
-         <div className='bg-[#5FB5DE] z-0  blur-[80px] h-[120px] bottom-[30%] left-[0] w-[120px]  md:h-[150px]  md:w-[150px] md:blur-[100px] lg:h-[200px] lg:w-[200px] lg:blur-[100px] absolute xl:h-[270px] xl:w-[300px] xl:blur-[300px]'></div>
-        {/*  SLIDER */}    <div  className=' '>
+         <div className='bg-[#5FB5DE] z-0  blur-[80px] h-[120px] md:bottom-[30%] md:left-[0] w-[120px]  md:h-[150px]  md:w-[150px] md:blur-[100px] lg:h-[200px] lg:w-[200px] lg:blur-[100px] absolute xl:h-[270px] xl:w-[300px] xl:blur-[300px]'></div>
+        
+        {/*  SLIDER */}    
+        <div  className=' '>
 
                  
            <Swiper  
@@ -64,7 +66,7 @@ const TemplateDetail = ({props}) => {
                          pagination={{ clickable: true }}
 
 
-                         className='w-full h-[100%] MySwiper2 m-0 p-0'
+                         className='w-full h-[100%] max-w-[550px] m-auto MySwiper2 p-0'
                              >
                           <SwiperSlide> <img
                                    alt={template.title}
@@ -95,7 +97,7 @@ const TemplateDetail = ({props}) => {
                          </SwiperSlide>
                          <SwiperSlide> <img
                                    alt={template.title}
-                                   srcSet={template.image}
+                                   srcSet={template.image4}
                                    className="w-full object-contain "
                                  />
                          </SwiperSlide>
@@ -110,7 +112,7 @@ const TemplateDetail = ({props}) => {
                                     freeMode={true}
                                     watchSlidesProgress={true}
                                     modules={[FreeMode, Navigation, Thumbs]}
-                                    className="mySwiper mt-6 p-0"
+                                    className="mySwiper mt-6 p-0 max-w-[500px]"
                                       >
                                    
 
@@ -147,14 +149,14 @@ const TemplateDetail = ({props}) => {
           
       
      
-           <div className="sticky top-0">
+           <div className="sticky top-0  justify-self-end" >
              <strong
                className="rounded-full border   px-3 py-0.5 text-xs font-medium tracking-wide " style={{borderColor:`${template.color}`, color:`${template.color}`}}
              >
               Detalles
              </strong>
      
-             <div className="mt-8 flex justify-between">
+             <div className="mt-6 flex justify-between">
                <div className="max-w-[35ch] space-y-2">
                  <h1 className="text-xl font-bold sm:text-2xl mb-6 text-gray-100">
                   {template.title}
@@ -220,16 +222,17 @@ const TemplateDetail = ({props}) => {
                  </div>
                </div>
      
-               <p className="text-lg font-bold text-[#0CC0DF] ">Template </p>
+               <p className="text-lg font-normal text-white " style={{color:`${template.color}`}}>Template </p>
              </div>
 
              <p className="text-sm text-gray-50 mt-3" >Descripcion:</p>
      
               <div className="mt-4">
                <div className="prose max-w-none ">
-                 <p className='text-[13px] md:text-sm text-left text-gray-100'>
+                 <p className='text-[13px] md:text-sm text-left text-gray-100 mb-5'>
                    {template.description}
                  </p>
+                 <a href="#nosotros" className='ml-0 text-sm  mt-[10px] mb-[5vh] px-4 py-2 self-start bg-[transparent] border border-[#5FB5DE]  rounded-[5px] text-white md:inline-block  transition duration-200 hover:text-white hover:bg-[#5FB5DE] md:text-base' >Contactar</a>
                  
                </div>
               </div> 
