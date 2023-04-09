@@ -3,10 +3,10 @@ import React from 'react'
 const Faqs = () => {
   return (
     <>
-    <div className='pt-[50px] h-[5px]' id="nosotros"></div>
+    
     
     <div id='faqs' className='min-h-[95vh] w-full flex flex-col items-center pt-[100px] bg-[#0B1325]'>
-
+    <div className='bg-[#5FB5DE] z-0  blur-[80px] h-[120px] top-[-100px] left-[-250px] w-[120px]  md:h-[150px]  md:w-[150px] md:blur-[100px] lg:h-[200px] lg:w-[200px] lg:blur-[100px] absolute xl:h-[270px] xl:w-[300px] xl:blur-[220px]'></div>
         <div className='h-full w-full max-w-[1000px] '>
 
             <h3 className='text-center  text-[42px] mb-16 bg-gradient-to-r from-[#ffffff] to-[#12b4ff] bg-clip-text text-transparent'>Preguntas Frecuentes</h3>
@@ -54,7 +54,7 @@ const Faqs = () => {
     </summary>
 
     <p className="mt-4 leading-relaxed text-gray-300 text-xs sm:text-sm">
-      Luego de contratarnos via Email, Instagram o Whatsapp, nos pondremos en contacto con ustedes para organizar una reunion via zoom o google Meet y ponernos de acuerdo en algunas necesidades que nosotros tenemos para iniciar el desarrollo de su sitio web. Ej: Logo, paleta de colores, etc.
+      Luego de contactarnos por Email, Instagram o Whatsapp, nos pondremos en contacto con ustedes para organizar una reunion via zoom o google Meet y ponernos de acuerdo en algunas necesidades que nosotros tenemos para iniciar el desarrollo de su sitio web. Ej: Logo, paleta de colores, etc.
     </p>
   </details>
 

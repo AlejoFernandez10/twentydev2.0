@@ -77,7 +77,7 @@ const PlanesContainer = () => {
     <p className='text-white w-full text-center mb-[50px] ' >Creamos tu sitio web como más te guste!</p>
 
 
-    <div className='bg-[#5FB5DE] z-0  blur-[80px] h-[120px] bottom-[1%] left-[40%] w-[120px]  md:h-[150px]  md:w-[150px] md:blur-[100px] lg:h-[200px] lg:w-[200px] lg:blur-[100px] absolute xl:h-[270px] xl:w-[300px] xl:blur-[220px]'></div>
+    <div className='bg-[#5FB5DE] z-0  blur-[80px] h-[120px] top-[-100px] left-[-250px] w-[120px]  md:h-[150px]  md:w-[150px] md:blur-[100px] lg:h-[200px] lg:w-[200px] lg:blur-[100px] absolute xl:h-[270px] xl:w-[300px] xl:blur-[220px]'></div>
 
       <PlanesList data={planesData} />
 
