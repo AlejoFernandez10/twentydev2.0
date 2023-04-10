@@ -20,7 +20,7 @@ $asunto = 'Mensaje enviado desde TwentyDev';
 
 mail($mailContacto, $asunto, utf8_decode($message), $header);
 
-header('Location:exito.html');
+header('Location:index.html');
 
 ?>
 

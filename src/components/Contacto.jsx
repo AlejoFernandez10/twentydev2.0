@@ -1,8 +1,10 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
 
+import { useNavigate } from 'react-router-dom';
 
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const expresionesFormularios = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios pueden llevar acentos
@@ -17,7 +19,7 @@ const Contacto = () => {
 
   const { register, handleSubmit ,formState: { errors } } = useForm();
 
-    
+  const notify = () => toast("Wow so easy!");
   
 
   return (
@@ -41,7 +43,7 @@ const Contacto = () => {
        
         
 
-  <form action='../form.php' method='post' id='form' onSubmit={()=> handleSubmit()}  className="form flex flex-col justify-center items-center w-full gap-[10px] mt-[50px] md:w-[50%] md:mt-0 lg:w-[45%] xl:max-w-[40%]">
+  <form action='../form.php' method='post' id='form' onSubmit={()=> handleSubmit()  }  className="form flex flex-col justify-center items-center w-full gap-[10px] mt-[50px] md:w-[50%] md:mt-0 lg:w-[45%] xl:max-w-[40%]">
     
     <input name="name" placeholder="Nombre completo" className="form-input  text-gray-100 rounded w-full border-[0px] p-[15px] bg-[#0B1325] lg:p-[20px] lg:text-[18px]"  {...register("name", {
       required: true,       
@@ -78,11 +80,11 @@ const Contacto = () => {
 
     
     <input type="submit" className="submitBtn  cursor-pointer h-[3.5rem] w-[8rem] mt-[20px] rounded-[10px] border-[#4EA4CD] border-[2px] text-[#4EA4CD] transition duration-200 hover:bg-[#4EA4CD] mb-[50px] hover:text-white  hover:border-[0px]" />
-  
+    
   </form>
 
       </div>
-
+      <ToastContainer />
       </div>
 
       
