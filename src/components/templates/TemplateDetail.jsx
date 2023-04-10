@@ -233,7 +233,7 @@ const TemplateDetail = ({props}) => {
                    {template.description}
                  </p>
 
-                 <Link href="/contacto" className='ml-0 text-sm mr-2  mt-[10px] mb-[5vh] px-4 py-2 self-start bg-[transparent] border border-[#5FB5DE]  rounded-[5px] text-white md:inline-block  transition duration-200 hover:text-white hover:bg-[#5FB5DE] md:text-base' >Contactar</Link>
+                 <Link to={"/contacto"} className='ml-0 text-sm mr-2  mt-[10px] mb-[5vh] px-4 py-2 self-start bg-[transparent] border border-[#5FB5DE]  rounded-[5px] text-white md:inline-block  transition duration-200 hover:text-white hover:bg-[#5FB5DE] md:text-base' >Contactar</Link>
                  <a href={template.link} target='blank' className='ml-0 text-sm  mt-[10px] mb-[5vh] px-4 py-2 self-start bg-[transparent] border border-[#5FB5DE]  rounded-[5px] text-white md:inline-block  transition duration-200 hover:text-white hover:bg-[#5FB5DE] md:text-base' >Ver Demo</a>
                </div>
               </div> 
