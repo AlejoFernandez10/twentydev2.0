@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 const Plan = ({title, color, tick, noTick, descrip, priceLineThrough, noLoginTick,discountPrice, discountText, delivery, Secciones, Responsive, DiseñoModerno, DiseñoPersonalizable, SeccionCarrito, SeccionLogin, pl, actualPrice }) => {
 
 
@@ -23,7 +25,7 @@ const Plan = ({title, color, tick, noTick, descrip, priceLineThrough, noLoginTic
   <span className='flex items-center justify-start'><img srcSet={noLoginTick ? noLoginTick : tick } className="pl-1" alt=""  /><p className='pl-1 text-[#94A3B8] text-sm ml-1 ' >{SeccionCarrito}</p></span>
 </div>
 <div className="btnContainer w-full flex justify-center mt-[35px] mb-[30px]">
-  <a href="#contacto" className="py-[0.6rem] px-6 self-center border rounded-[8px] text-white scale-100 transiotion duration-200 hover:scale-105 hover:text-[#94A3B8]" style={{borderColor:`${color}`}}  >Consultar</a>
+  <Link to={'/contacto'} className="py-[0.6rem] px-6 self-center border rounded-[8px] text-white scale-100 transiotion duration-200 hover:scale-105 hover:text-[#94A3B8]" style={{borderColor:`${color}`}}  >Consultar</Link>
 
 </div>
 </div>
