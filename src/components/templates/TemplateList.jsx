@@ -12,7 +12,7 @@ const TemplateList = ({props}) => {
             
             {props.map((template)=>(
 
-                <Template image={template.image} title={template.title} icon={template.verIcon} id={template.id} />
+                <Template image={template.image} title={template.title} icon={template.verIcon} id={template.id} badge2={template.badge2}  />
             ))}
     
         </div>

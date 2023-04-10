@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useState } from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { FreeMode, Navigation, Thumbs } from "swiper";
@@ -227,13 +227,14 @@ const TemplateDetail = ({props}) => {
 
              <p className="text-sm text-gray-50 mt-3" >Descripcion:</p>
      
-              <div className="mt-4">
+              <div className="mt-4 ">
                <div className="prose max-w-none ">
                  <p className='text-[13px] md:text-sm text-left text-gray-100 mb-5'>
                    {template.description}
                  </p>
-                 <a href="#nosotros" className='ml-0 text-sm  mt-[10px] mb-[5vh] px-4 py-2 self-start bg-[transparent] border border-[#5FB5DE]  rounded-[5px] text-white md:inline-block  transition duration-200 hover:text-white hover:bg-[#5FB5DE] md:text-base' >Contactar</a>
-                 
+
+                 <Link href="/contacto" className='ml-0 text-sm mr-2  mt-[10px] mb-[5vh] px-4 py-2 self-start bg-[transparent] border border-[#5FB5DE]  rounded-[5px] text-white md:inline-block  transition duration-200 hover:text-white hover:bg-[#5FB5DE] md:text-base' >Contactar</Link>
+                 <a href={template.link} target='blank' className='ml-0 text-sm  mt-[10px] mb-[5vh] px-4 py-2 self-start bg-[transparent] border border-[#5FB5DE]  rounded-[5px] text-white md:inline-block  transition duration-200 hover:text-white hover:bg-[#5FB5DE] md:text-base' >Ver Demo</a>
                </div>
               </div> 
       

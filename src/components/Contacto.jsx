@@ -1,5 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { useForm } from "react-hook-form";
+
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const expresionesFormularios = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios pueden llevar acentos
@@ -11,13 +14,11 @@ const expresionesFormularios = {
 const Contacto = () => {
 
   
-  const { register, handleSubmit, formState: { errors } } = useForm();
 
-   
-  
-  
+  const { register, handleSubmit ,formState: { errors } } = useForm();
+
     
-
+  
 
   return (
     <>
@@ -40,7 +41,7 @@ const Contacto = () => {
        
         
 
-  <form action='../form.php' method='post' id='form'  className="form flex flex-col justify-center items-center w-full gap-[10px] mt-[50px] md:w-[50%] md:mt-0 lg:w-[45%] xl:max-w-[40%]">
+  <form action='../form.php' method='post' id='form' onSubmit={handleSubmit()}  className="form flex flex-col justify-center items-center w-full gap-[10px] mt-[50px] md:w-[50%] md:mt-0 lg:w-[45%] xl:max-w-[40%]">
     
     <input name="name" placeholder="Nombre completo" className="form-input  text-gray-100 rounded w-full border-[0px] p-[15px] bg-[#0B1325] lg:p-[20px] lg:text-[18px]"  {...register("name", {
       required: true,       
@@ -91,43 +92,3 @@ const Contacto = () => {
 
 
 export default Contacto
-
-/* 
-const { register, handleSubmit, formState: { errors } } = useForm();
-
-  const onSubmit = (data) => {
-    console.log(data);
-  };
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="name">Nombre</label>
-      <input name="name" placeholder="Nombre completo" {...register("name", {
-        required: true,       
-        
-        pattern: expresionesFormularios.nombre
-      })} />
-      {errors.name && <span className='text-red-600'>El nombre debe contener entre 3 y 40 caracteres y solo puede contener letras y espacios.</span>}
-
-      <label htmlFor="phone">Teléfono</label>
-      <input name="number" placeholder="Número telefónico" {...register("phone", {
-        required: true,
-        
-        pattern: expresionesFormularios.telefono
-      })} />
-      {errors.phone && <span className='text-red-600'>El numero de teléfono debe contener entre 7 y 14 números.</span>}
-
-      <input name="mail" placeholder:"Correo electronico" {...register("email", {
-        required: true,
-        
-        
-        pattern: expresionesFormularios.correo
-      })} />
-      {errors.email && <span className='text-red-600'>El correo electrónico no es válido.</span>}
-
-      <textarea name='message' cols="30" rows="5" className="form-input rounded w-full border-[0px] p-[15px] bg-[#0B1325] lg:p-[20px] lg:text-[18px] text-gray-100" placeholder="Deja tu consulta ..." required autoComplete="off"></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  );
- */

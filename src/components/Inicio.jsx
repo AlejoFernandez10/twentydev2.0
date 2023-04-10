@@ -5,10 +5,12 @@ import laptop  from '../assets/notebook.webp'
 import arrowDown from '../assets/arrowdown.webp'
 
 
+
 import '../App.css'
 
 
 import Nosotros from './Nosotros'
+import PorqueElegirnos from './PorqueElegirnos'
 import { Link } from 'react-router-dom'
 
 
@@ -53,6 +55,8 @@ const Inicio = () => {
 
     
     <Nosotros />
+
+    <PorqueElegirnos />
 
 
     {/*  SECOND CALL TO ACTION */}

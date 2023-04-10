@@ -14,7 +14,7 @@ const Nosotros = () => {
     <>
     
      <div className='mt-[100px] h-[50px]' id="nosotros"></div>
-<div className=" w-full min-h-[100vh] flex flex-col relative justify-center bg-[#0B1325]">
+<div className=" w-full min-h-[100vh] flex flex-col relative justify-center bg-[#0B1325] pb-[100px]">
 
 
   
@@ -51,7 +51,7 @@ const Nosotros = () => {
     </div>
 
 
-    <a href="#contacto" className='mt-10 mb-20 px-4 py-[0.8rem] rounded-[7px] text-[#5FB5DE] border border-[#5FB5DE] transition duration-200 hover:text-white hover:bg-[#5FB5DE]' >Contactanos!</a>
+   
   </div>
 </div> 
     </>

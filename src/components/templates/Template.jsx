@@ -2,7 +2,7 @@
 import React from 'react'
 import '../../App.css'
 import { Link } from 'react-router-dom'
-const Template = ({image, title, icon, id}) => {
+const Template = ({image, title, icon, id, badge2}) => {
 
 
     
@@ -16,7 +16,27 @@ const Template = ({image, title, icon, id}) => {
 
                 <div  className="template-link relative" target="_blank">
 
-                <img src={image} className='template-img h-[160px] m-auto md:h-[186px] '  alt={`${title}`} />
+                  <div className='relative'>
+
+                  <img src={image} className='template-img h-[160px] m-auto md:h-[186px] '  alt={`${title}`} />
+                  
+                  
+
+                  {badge2 &&
+                  <span
+                  className="inline-flex items-center justify-center absolute rounded-[10px] m-2 bg-[#5FB5DE] px-2.5 py-0.5 text-white top-0 right-0"
+                >
+                  
+                
+                  <p className="text-sm whitespace-nowrap">New</p>
+                </span>
+                
+                  }
+
+                 
+                  
+                  </div>
+
                 <div className="img-gradient" ></div>
                 <button className="template-Detail-btn "><a href="#" className='flex flex-col '><img src={icon} alt="ver" /> </a></button>
 
