@@ -41,7 +41,7 @@ const Contacto = () => {
        
         
 
-  <form action='../form.php' method='post' id='form' onSubmit={handleSubmit()}  className="form flex flex-col justify-center items-center w-full gap-[10px] mt-[50px] md:w-[50%] md:mt-0 lg:w-[45%] xl:max-w-[40%]">
+  <form action='../form.php' method='post' id='form' onSubmit={()=> handleSubmit()}  className="form flex flex-col justify-center items-center w-full gap-[10px] mt-[50px] md:w-[50%] md:mt-0 lg:w-[45%] xl:max-w-[40%]">
     
     <input name="name" placeholder="Nombre completo" className="form-input  text-gray-100 rounded w-full border-[0px] p-[15px] bg-[#0B1325] lg:p-[20px] lg:text-[18px]"  {...register("name", {
       required: true,       
