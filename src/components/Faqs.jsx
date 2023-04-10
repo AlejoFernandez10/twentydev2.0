@@ -9,7 +9,7 @@ const Faqs = () => {
     <div className='bg-[#5FB5DE] z-0  blur-[80px] h-[120px] top-[-100px] left-[-250px] w-[120px]  md:h-[150px]  md:w-[150px] md:blur-[100px] lg:h-[200px] lg:w-[200px] lg:blur-[100px] absolute xl:h-[270px] xl:w-[300px] xl:blur-[220px]'></div>
         <div className='h-full w-full max-w-[1000px] '>
 
-            <h3 className='text-center  text-[42px] mb-16 bg-gradient-to-r from-[#ffffff] to-[#12b4ff] bg-clip-text text-transparent'>Preguntas Frecuentes</h3>
+            <h3 className='text-center  text-[30px] sm:text-[35px] lg:text-[43px] mb-[60px] mt-10 bg-gradient-to-r from-[#4EA4CD]  to-[#9FF9FF] bg-clip-text text-transparent'>Preguntas Frecuentes</h3>
 
             <div className="space-y-4 ">
             <details
